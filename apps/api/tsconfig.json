@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": ".build",
+    "rootDir": "src",
+    "sourceRoot": "/",
+    "target": "es2019",
+    "typeRoots": [
+      "./src/typings",
+      "./node_modules/@types",
+      "../../node_modules/@types"
+    ]
+  },
+  "exclude": ["node_modules"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts"]
+}

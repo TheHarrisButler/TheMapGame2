@@ -3,13 +3,19 @@
   "version": "1.0.0",
   "description": "A Game using the ShipEngine API",
   "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
   "scripts": {
-    "start": "concurrently --kill-others-on-fail \"npm start:api\"  \"npm start:web\""
+    "start": "concurrently --kill-others-on-fail \"yarn start:api\"  \"yarn start:web\"",
+    "start:api": "yarn workspace api start",
+    "start:web": "yarn workspace web start"
   },
   "author": "Harris Butler",
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
+    "concurrently": "^6.2.1",
     "typescript": "^4.4.3"
   }
 }

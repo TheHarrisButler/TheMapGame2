@@ -1,16 +1,20 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "declaration": true,
+    "declarationMap": true,
+    "isolatedModules": false,
+    "module": "commonjs",
+    "noEmit": false,
     "outDir": ".build",
     "rootDir": "src",
-    "sourceRoot": "/",
     "target": "es2019",
+    "sourceRoot": "/",
     "typeRoots": [
       "./src/typings",
       "./node_modules/@types",
       "../../node_modules/@types"
     ]
   },
-  "exclude": ["node_modules"],
   "include": ["src/**/*.ts", "src/**/*.d.ts"]
 }

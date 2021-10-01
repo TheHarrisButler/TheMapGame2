@@ -4,6 +4,8 @@
     "declaration": true,
     "declarationMap": true,
     "isolatedModules": false,
+    "emitDecoratorMetadata": true, // Required by typeorm
+    "experimentalDecorators": true, // Required by typeorm
     "module": "commonjs",
     "noEmit": false,
     "outDir": ".build",

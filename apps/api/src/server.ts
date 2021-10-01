@@ -9,7 +9,14 @@ async function start() {
   try {
     await initializeDatabase();
   } catch (error) {
-    console.log(error);
+    console.log(
+      `
+      
+    This is an error on DB initialization
+
+    `,
+      error
+    );
   }
   app.get("/", (_req, res) => {
     res.send("Hello World!");

@@ -20,7 +20,7 @@ const connectionOptions: ConnectionOptions = {
   synchronize: false,
   logging: true,
   entities: [Account, Record],
-};
+} as ConnectionOptions;
 
 export const initializeDatabase = async (): Promise<DBconnection> => {
   const connection = await createConnection({

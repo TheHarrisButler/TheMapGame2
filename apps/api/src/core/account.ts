@@ -10,9 +10,6 @@ import { guid } from "../utils/guid";
 @Entity()
 export class Account extends BaseEntity {
   @PrimaryColumn("guid")
-  id!: string;
-
-  @Column({ nullable: false })
   @Index({ unique: true })
   guid!: string;
 
@@ -27,6 +24,6 @@ export class Account extends BaseEntity {
 
   @BeforeInsert()
   addId() {
-    this.id = guid();
+    this.guid = guid();
   }
 }

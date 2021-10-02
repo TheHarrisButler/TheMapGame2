@@ -1,3 +1,4 @@
+require("dotenv-flow").config();
 import express from "express";
 import initializeDatabase from "./core/database";
 

@@ -17,15 +17,13 @@ const url =
 const connectionOptions: ConnectionOptions = {
   type: "postgres",
   url: url,
-  synchronize: false,
+  synchronize: true,
   logging: true,
   entities: [Account, Record],
 } as ConnectionOptions;
 
 export const initializeDatabase = async (): Promise<DBconnection> => {
-  const connection = await createConnection({
-    ...connectionOptions,
-  });
+  const connection = await createConnection(connectionOptions);
   return connection;
 };
 

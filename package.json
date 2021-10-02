@@ -8,9 +8,9 @@
     "apps/*"
   ],
   "scripts": {
-    "start": "concurrently --kill-others-on-fail \"yarn start:api\"  \"yarn start:web\"",
-    "start:api": "yarn workspace api start",
-    "start:web": "yarn workspace web start"
+    "start": "concurrently --kill-others-on-fail \"yarn dev:api\"  \"yarn dev:web\"",
+    "dev:api": "yarn workspace api dev",
+    "dev:web": "yarn workspace web dev"
   },
   "author": "Harris Butler",
   "license": "ISC",

@@ -2,10 +2,7 @@ import { PrimaryColumn, Column, Entity, Index } from "typeorm";
 
 @Entity()
 export class Record {
-  @PrimaryColumn("guid")
-  id!: string;
-
-  @Column({ nullable: false })
+  @PrimaryColumn("uuid", { nullable: false })
   @Index({ unique: true })
   guid!: string;
 

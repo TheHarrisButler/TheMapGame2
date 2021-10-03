@@ -9,7 +9,7 @@ import {
 import { guid } from "../utils/guid";
 @Entity()
 export class Account extends BaseEntity {
-  @PrimaryColumn("guid")
+  @PrimaryColumn("uuid", { nullable: false })
   @Index({ unique: true })
   guid!: string;
 
